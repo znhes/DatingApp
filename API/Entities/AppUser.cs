@@ -28,6 +28,12 @@ namespace API.Entities
 
         public ICollection<Message> MessagesSent { get; set; }
         public ICollection<Message> MessagesReceived { get; set; }
+
+        internal object First()
+        {
+            throw new NotImplementedException();
+        }
+
         public ICollection<AppUserRole> UserRoles { get; set; }
     }
 }
