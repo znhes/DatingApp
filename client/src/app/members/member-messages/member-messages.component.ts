@@ -14,7 +14,7 @@ export class MemberMessagesComponent implements OnInit {
   @Input() messages: Message[];
   @Input() username: string;
   messageContent: string;
-  loading = false;
+  
   
 
   
@@ -24,11 +24,11 @@ export class MemberMessagesComponent implements OnInit {
   ngOnInit(): void {
     
   }
-  sendMessage() {
-    this.loading = true;
+  sendMessage() { 
+    
     this.messageService.sendMessage(this.username, this.messageContent).then(() => {
       this.messageForm.reset();
-    }).finally(() => this.loading = false);
+    })
   }
   
   
